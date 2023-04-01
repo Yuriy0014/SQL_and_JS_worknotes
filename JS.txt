@@ -6,4 +6,18 @@ function randomWholeNum() {
 }
 =======================
 
-test
+Short cicruit evluation:
+
+Let us take one more example:
+
+let name = user.name || 'No name'
+
+
+Translated code:
+
+let name = ''
+if (!user.name) { 
+ name = 'No name'
+}
+else {
+ name = user.name
