@@ -1,0 +1,185 @@
+insert into users (id, first_name, last_name, birthday)
+values (9, "Антон", "Пепеляев", "1992-07-12")
+============================================
+
+insert into users SET id=10, first_name="Никита", last_name="Петров"
+============================================
+
+insert into products (id, name, count, price)
+values
+(8,"iPhone 7", 1, 59990),
+(9,"iPhone 8", 3, 64990),
+(10,"iPhone X", 2, 79900);
+============================================
+
+update orders set status = "new" where status is NULL
+
+============================================
+
+delete from products where count = 0;
+
+============================================
+CREATE TABLE users2 (
+ id INT,
+ first_name VARCHAR(20), 
+ last_name VARCHAR(50),
+ birthday DATE,
+ age TINYINT,
+ active BOOL
+ );
+ INSERT INTO users2 (id, first_name, last_name, birthday, age, active)
+ VALUES (1, 'Дмитрий', 'Иванов', '1986-02-18', 31, True);
+
+
+============================================
+
+create table orders (
+    id INT UNSIGNED,
+    product_id INT UNSIGNED,
+    sale TINYINT UNSIGNED,
+    amount DECIMAL(8,2)
+);
+
+insert into orders (id, product_id, sale, amount)
+values
+(1,245,0,230.50),
+(2,17,15,999999.99),
+(3,145677,21,1240.00);
+
+
+
+
+============================================
+
+create table films (
+    id INT UNSIGNED,
+    name VARCHAR(100),
+    rating float UNSIGNED,
+    CONSTRAINT rating_gte_0 CHECK (rating >= 0),
+    CONSTRAINT rating_lte_10 CHECK (rating <= 10),
+    country VARCHAR(2)
+);
+
+insert into films(id, name, rating, country)
+values
+(1,"Большая буря",3.45,"RU"),
+(2,"Игра",7.5714,"US"),
+(3,"Война",10.0,"RU");
+============================================
+
+create table users (
+    id INT UNSIGNED,
+    email VARCHAR(100),
+    date_joined DATE,
+    last_activity DATETIME
+);
+
+insert into users (id,email,date_joined,last_activity)
+values
+(1,"user1@domain.com","2014-12-12","2016-04-08 12:34:54"),
+(2,"user2@domain.com","2014-12-12","2017-02-13 11:46:53"),
+(3,"user3@domain.com","2014-12-13","2017-04-04 05:12:07");
+
+============================================
+create table users (
+    id INT UNSIGNED NOT NULL,
+	email VARCHAR(20) NOT NULL
+
+============================================
+
+create table articles (
+    id INT UNSIGNED NOT NULL,
+	name VARCHAR(80),
+    text TEXT,
+    state ENUM("draft","correction","public")
+);
+
+============================================
+select name,price,country from products where category_id IS NOT NULL and (find_in_set("RU",country) or find_in_set("BY",country))
+order by price desc
+
+
+============================================
+created DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+amount MEDIUMINT UNSIGNED NOT NULL DEFAULT 0,
+
+============================================
+
+
+
+============================================
+
+
+
+============================================
+
+
+
+============================================
+
+
+
+============================================
+
+
+
+============================================
+
+
+
+============================================
+
+
+
+============================================
+
+
+
+============================================
+
+
+
+============================================
+
+
+
+============================================
+
+
+
+============================================
+
+
+
+============================================
+
+
+
+============================================
+
+
+
+============================================
+
+
+
+============================================
+
+
+
+============================================
+
+
+
+============================================
+
+
+
+
+
+
+
+
+
+
+
