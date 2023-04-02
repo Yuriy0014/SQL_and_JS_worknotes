@@ -215,6 +215,10 @@ function check(a,x){
 };
 ===================================================
 
+const helloMagicWorldArray = ["Hello", "Magic", "World"]
+const helloMagicWorldString = helloMagicWorldArray.join("")
+console.log(helloMagicWorldString)
+// Output: "HelloMagicWorld"
 
 
 
