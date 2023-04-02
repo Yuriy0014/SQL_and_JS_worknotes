@@ -112,6 +112,71 @@ However, notice that multiply(arr, n) == multiply(arr, n - 1) * arr[n - 1]. That
 
 
 ===================================================
+// Only change code below this line
+function countdown(n){
+   if (n < 1) {
+    return [];
+  } else {
+    const countArray = countdown(n - 1);
+    countArray.unshift(n);
+    return countArray;
+  }
+}
+
+
+
+
+===================================================
+
+function rangeOfNumbers(startNum, endNum) {
+  if (startNum === endNum){
+      return [startNum];
+  }
+  else {
+    const rangeArr = rangeOfNumbers(startNum, endNum - 1);
+    rangeArr.push(endNum);
+    return rangeArr;
+  }
+};
+
+console.log(rangeOfNumbers(1,6))
+
+
+
+===================================================
+
+How to find length
+--------------------
+
+console.log("Alan Peter".length);
+
+
+
+
+===================================================
+Arrays methods
+---------------
+
+*	.push() takes one or more parameters and "pushes" them onto the end of the array.
+*	.pop() is used to pop a value off of the end of an array. We can store this popped off value by assigning it to a variable. In other words, .pop() removes the last element from an array and returns that element.
+*	That's where .shift() comes in. It works just like .pop(), except it removes the first element instead of the last.
+*	.unshift() works exactly like .push(), but instead of adding the element at the end of the array, unshift() adds the element at the beginning of the array.
+
+
+
+===================================================
+ES 6 course
+===================================================
+function checkScope() {
+  let i = 'function scope';
+  if (true) {
+    let i = 'block scope';
+    console.log('Block scope i is: ', i);
+  }
+  console.log('Function scope i is: ', i);
+  return i;
+}
+
 
 
 
@@ -119,52 +184,37 @@ However, notice that multiply(arr, n) == multiply(arr, n - 1) * arr[n - 1]. That
 
 ===================================================
 
-
-
-
-
-===================================================
-
-
-
+sentence.toUpperCase()
 
 
 
 ===================================================
+const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 
+const result = words.filter(word => word.length > 6);
 
-
-
-
-===================================================
-
-
-
-
+console.log(result);
+// Expected output: Array ["exuberant", "destruction", "present"]
 
 
 
 ===================================================
+let firstNames = ["super", "spider", "ant", "iron"]
+let lastName = "man";
 
+let fullNames = firstNames.map(firstName => firstName + lastName);
 
+console.log(fullNames);
 
-
-
-===================================================
-
-
-
-
-===================================================
-
+// ["superman", "spiderman", "antman", "ironman"]
 
 
 ===================================================
-
-
-
-
+function check(a,x){
+  return a.includes(x);
+};
 ===================================================
+
 
 
 
