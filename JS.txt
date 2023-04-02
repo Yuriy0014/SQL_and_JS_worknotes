@@ -240,7 +240,11 @@ console.log(sumWithInitial);
 
 ===================================================
 
+Просуммировать все положительные числа массива
 
+function positiveSum(arr) {
+  return arr.filter(value => value > 0 ).reduce((accum,current) => accum + current,0);
+}
 
 
 
