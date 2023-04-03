@@ -283,7 +283,9 @@ This code will still return the string value by default.
 
 
 ===================================================
+If an arrow function has a single parameter, the parentheses enclosing the parameter may be omitted.
 
+const doubler = item => item * 2;
 
 
 
