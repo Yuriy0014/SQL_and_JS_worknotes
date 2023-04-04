@@ -513,7 +513,24 @@ function sumCubes(n){
 
 
 ===================================================
+My solution:
 
+function filterHomogenous(arrays) {
+  let arraysfinal = []
+  for (let i = 0; i < arrays.length; i++) {
+    let equal = true;
+    for (let j = 0; j < arrays[i].length - 1; j++) {
+      if ( typeof arrays[i][j] !== typeof arrays[i][j + 1] ) 
+        {
+          equal = false;
+        }
+    }
+    if (equal && arrays[i].length !== 0 ) {
+      arraysfinal.push(arrays[i]);
+    }
+  }
+  return arraysfinal;
+}
 
 
 ===================================================
