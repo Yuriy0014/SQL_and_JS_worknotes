@@ -413,7 +413,16 @@ switch (val) {
 
 
 ===================================================
+Reverse words
 
+My code:
+	function reverseWords(str) {
+		let strarr = str.split(' ');
+		for (let i = 0; i < strarr.length; i++) {
+			strarr[i] = strarr[i].split('').reverse().join('');
+		}
+		return strarr.join(' ');
+}
 
 
 
