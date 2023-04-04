@@ -372,18 +372,18 @@ The test method here returns true.
 ===================================================
 Count of positives / sum of negatives
 
-def count_positives_sum_negatives(arr):
-    resultArr = [];
-    if arr == None:
-        return resultArr
-    elif len(arr)>0:
-        b = [x for x in arr if x <= 0]
-        resultArr.append(len(arr)-len(b))
-        resultArr.append(sum(b))
-        return resultArr
-    else:
-        return resultArr
-
+function countPositivesSumNegatives(input) {
+  if (input === null) {
+    return [];
+  } else if (input.length === 0){
+    return [];
+  } else {
+  let arrFin = [];
+  arrFin.push(input.filter(value => value > 0).reduce((accum) => accum + 1,0));
+  arrFin.push(input.filter(value => value < 0).reduce((accum,current) => accum + current,0));
+  return arrFin;
+    }
+}
 
 
 
