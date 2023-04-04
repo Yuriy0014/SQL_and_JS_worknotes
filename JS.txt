@@ -540,9 +540,17 @@ function filterHomogenous(arr) {
 }
 
 ===================================================
+Как сделать из двух массивов один ?
 
+function arrayPlusArray(arr1, arr2) {
+  return arr1.concat(arr2);
+}
 
+или
 
+function arrayPlusArray(arr1, arr2) {
+  let arr = [...arr1, ...arr2];
+}
 
 ===================================================
 
