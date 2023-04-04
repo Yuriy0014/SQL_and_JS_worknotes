@@ -370,7 +370,19 @@ The test method here returns true.
 
 
 ===================================================
+Count of positives / sum of negatives
 
+def count_positives_sum_negatives(arr):
+    resultArr = [];
+    if arr == None:
+        return resultArr
+    elif len(arr)>0:
+        b = [x for x in arr if x <= 0]
+        resultArr.append(len(arr)-len(b))
+        resultArr.append(sum(b))
+        return resultArr
+    else:
+        return resultArr
 
 
 
