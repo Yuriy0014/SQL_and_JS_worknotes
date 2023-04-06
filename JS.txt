@@ -665,9 +665,17 @@ function repeatStr (n, s) {
 
 
 ===================================================
-
-
-
+Cat years, Dog years
+JavaScript:
+var humanYearsCatYearsDogYears = function(humanYears) {
+  // Your code here!
+  let catYears = (humanYears == 1) ? 15 : (humanYears == 2) ? 24 : (humanYears - 2) * 4 + 24 ;
+  let dogYears = (humanYears == 1) ? 15 : (humanYears == 2) ? 24 : (humanYears - 2) * 5 + 24 ;
+  
+  
+  
+  return [humanYears,catYears,dogYears];
+}
 
 ===================================================
 
