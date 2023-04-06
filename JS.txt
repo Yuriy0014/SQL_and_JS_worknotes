@@ -657,7 +657,11 @@ function countSquares(cuts){
 
 
 ===================================================
-
+String repeat
+JavaScript:
+function repeatStr (n, s) {
+  return s.repeat(n);
+}
 
 
 ===================================================
