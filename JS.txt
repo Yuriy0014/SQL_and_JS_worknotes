@@ -607,15 +607,12 @@ function explode(x){
 }
 
 
-
-
-
-
-
 ===================================================
+Contamination #1 -String-
 
-
-
+function contamination(text, char){
+  return char.repeat(text.length)
+}
 
 
 
