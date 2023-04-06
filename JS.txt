@@ -694,13 +694,12 @@ function simpleMultiplication(number) {
 }
 
 
-
-
 ===================================================
-
-
-
-
+Find Nearest square number
+JavaScript:
+function nearestSq(n){
+    return Math.round(Math.sqrt(n)) ** 2;
+}
 
 ===================================================
 
