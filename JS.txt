@@ -628,7 +628,12 @@ function updateLight(current) {
 
 
 ===================================================
-
+You Can't Code Under Pressure #1
+JavaScript:
+function doubleInteger(i) {
+  // i will be an integer. Double it and return it.
+  return i * 2;
+}
 
 
 
