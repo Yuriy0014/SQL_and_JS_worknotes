@@ -617,7 +617,12 @@ function contamination(text, char){
 
 
 ===================================================
-
+Thinkful - Logic Drills: Traffic light
+JavaScript:
+function updateLight(current) {
+  
+  return current === "green" ? "yellow" : current === "yellow" ? "red" : "green"
+}
 
 
 
