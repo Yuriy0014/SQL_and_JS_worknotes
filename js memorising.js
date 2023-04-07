@@ -31,3 +31,20 @@ function sum(n, m = n) {
 
     return memo[n][m]
 }
+
+
+
+// Факториал числа
+// https://www.khanacademy.org/computing/computer-science/algorithms/recursive-algorithms/a/improving-efficiency-of-recursive-functions
+
+var memo2 = [];
+
+function fatcorial_mem(n) {
+	if (n === 0) {
+		return 1;
+	}
+	if (!memo2[n]) {
+		memo2[n] = n * fatcorial_mem(n-1)
+	}
+	return memo2[n]
+}
