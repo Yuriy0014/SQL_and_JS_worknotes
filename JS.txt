@@ -778,6 +778,12 @@ Note that the .match syntax is the "opposite" of the .test method you have been 
 
 
 ===================================================
+To search or extract a pattern more than once, you can use the global search flag: g.
+
+let repeatRegex = /Repeat/g;
+testStr.match(repeatRegex);
+And here match returns the value ["Repeat", "Repeat", "Repeat"]
+
 
 
 
