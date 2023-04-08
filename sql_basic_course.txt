@@ -139,6 +139,11 @@ DROP INDEX marks_index ON cars - удалить индекс
 
 ============================================
 
+ALTER TABLE USERS
+ADD COLUMN BIRTHDAY DATE NULL DEFAULT NULL  - добавление в таблицу новой колонки
+
+ALTER TABLE USERS
+DROP COLUMN BIRTHDAY - удаление колонки
 
 
 ============================================
