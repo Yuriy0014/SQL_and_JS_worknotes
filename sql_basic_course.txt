@@ -173,6 +173,8 @@ where name LIKE "Ю%" - отбор всех строк, где имя начин
 where name LIKE "Юр_" - отбор всех строк, где имя начинается с "Юр" и содержит в конце еще только 1 символ(_ соответствует одному символу)
 
 ============================================
+https://dev.mysql.com/doc/refman/8.0/en/fulltext-boolean.html
+
 Для использования полнотекстового поиска сначала нужно создать полнотекстовый индекс
 
 CREATE FULLTEXT INDEX idx_name on products(name);
@@ -217,7 +219,7 @@ WHERE MATCH(name, description) AGAINST ('платье детское');
 
 можно искать по шаблону (*)
 ============================================
-MATH in SQL
+MATH in SQL http://www.mysql.ru/docs/man/Mathematical_functions.html
 ---------
 ROUND(number) - округление до целого
 ROUND(number, 3) - округление до трех цифр после запятой
@@ -230,7 +232,8 @@ MOD(a,b) - остаток от деления a на b
 
 
 ============================================
-
+Strings in SQL https://dev.mysql.com/doc/refman/8.0/en/string-functions.html
+----------------
 
 
 ============================================
