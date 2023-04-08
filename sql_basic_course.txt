@@ -133,7 +133,9 @@ INDEX marks_index (mark)  - при создании таблицы
 
 CREATE INDEX marks_index ON cars(mark) - добавление индекса (cars - таблица, mark - стобец)
 
+CREATE UNIQUE INDEX marks_index ON cars(mark) - добавление уникального индекса (cars - таблица, mark - стобец) - зписи в колонке повторяться не могут.
 
+DROP INDEX marks_index ON cars - удалить индекс
 
 ============================================
 
