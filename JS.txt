@@ -811,13 +811,22 @@ For example, you want to match bag, big, and bug but not bog. You can create the
 	bogStr.match(bgRegex);
 In order, the four match calls would return the values ["big"], ["bag"], ["bug"], and null.
 ===================================================
+To create a negated character set, you place a caret character (^) after the opening bracket and before the characters you do not want to match.
 
+For example, /[^aeiou]/gi matches all characters that are not a vowel. Note that characters like ., !, [, @, / and white space are matched - the negated vowel character set only excludes the vowel characters.
 
 
 
 
 ===================================================
+/^Test/ - ищем только в начале строки
+/Test^/ - ищем только в конце строки
++   встречается раз и более
+*   встречается 0 раз и более
 
+Шаблоны
+let longHand = /[A-Za-z0-9_]/;
+let shortHand = /\w/;
 
 
 
