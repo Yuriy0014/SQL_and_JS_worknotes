@@ -211,6 +211,11 @@ CREATE FULLTEXT INDEX search ON products(name, description);
 Так как индекс создается по нескольким столбцам, то при поиске в конструкции MATCH надо перечислить их все:
 SELECT * FROM products 
 WHERE MATCH(name, description) AGAINST ('платье детское');
+
+
+
+
+можно искать по шаблону (*)
 ============================================
 
 
