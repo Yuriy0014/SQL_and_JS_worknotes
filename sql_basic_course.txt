@@ -284,12 +284,15 @@ mysql> SELECT SUBSTRING_INDEX('www.mysql.com', '.', -2);
 Функции Даты 
 --------------
 https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html
+https://www.w3schools.com/sql/func_mysql_date_format.asp
+
+
 
 SELECT * from users
-where date_joined > NOW - INTERVAL 7 DAY; - пользователи, подключившиеся за последние 7 дней
+where date_joined > NOW() - INTERVAL 7 DAY; - пользователи, подключившиеся за последние 7 дней
 
 
-DATE_FROMAT(date, "%d.%m.%Y %H:%i") - вывод даты в виде день.месяц.год часы:минуты
+DATE_FORMAT(date, "%d.%m.%Y %H:%i") - вывод даты в виде день.месяц.год часы:минуты
 
 
 
