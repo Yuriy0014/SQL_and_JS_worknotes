@@ -241,7 +241,17 @@ CONCAT_WS(separator,string1,string2) - конкатенация с раздел�
 LEFT(string,2) - берет 2 символа слева от string
 RIGHT(string,2) - берет 2 символа справа от string
 UPPER(string) - переводит с троку в верхний регистр
-TRIM(str) - удаляет пробелы в начале и конце строки (есть отдельно LTRIM,RTRI<)
+TRIM(str) - удаляет пробелы в начале и конце строки (есть отдельно LTRIM,RTRIM)
+
+LPAD(str,len,padstr)
+
+Returns the string str, left-padded with the string padstr to a length of len characters. If str is longer than len, the return value is shortened to len characters.
+
+
+mysql> SELECT LPAD('hi',4,'??');
+        -> '??hi'
+mysql> SELECT LPAD('hi',1,'??');
+        -> 'h'
 
 
 ============================================
