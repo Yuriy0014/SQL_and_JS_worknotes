@@ -296,9 +296,24 @@ DATE_FORMAT(date, "%d.%m.%Y %H:%i") - вывод даты в виде день.�
 
 ORDER BY transactions.date - сортировка по полю date в изнаальной табличке
 
+SUBDATE(date,INTERVAL expr unit), SUBDATE(expr,days)
+
+When invoked with the INTERVAL form of the second argument, SUBDATE() is a synonym for DATE_SUB(). For information on the INTERVAL unit argument, see the discussion for DATE_ADD().
+
+
+mysql> SELECT DATE_SUB('2008-01-02', INTERVAL 31 DAY);
+        -> '2007-12-02'
 
 
 ============================================
+Группировка данных. Функции аггрегации
+
+https://dev.mysql.com/doc/refman/5.7/en/aggregate-functions.html
+-------------
+
+
+
+
 
 
 
