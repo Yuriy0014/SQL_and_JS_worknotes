@@ -311,7 +311,12 @@ mysql> SELECT DATE_SUB('2008-01-02', INTERVAL 31 DAY);
 https://dev.mysql.com/doc/refman/5.7/en/aggregate-functions.html
 -------------
 
-
+select YEAR(date) as year, MONTH(date) as month ,SUMM(amount) as income,COUNT(*) as orders from orders
+where status = "success"
+GROUP BY 
+	YEAR(date),
+	MONTH(date)
+order by year, month
 
 
 
