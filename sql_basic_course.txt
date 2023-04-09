@@ -294,7 +294,7 @@ where date_joined > NOW() - INTERVAL 7 DAY; - пользователи, подк
 
 DATE_FORMAT(date, "%d.%m.%Y %H:%i") - вывод даты в виде день.месяц.год часы:минуты
 
-
+ORDER BY transactions.date - сортировка по полю date в изнаальной табличке
 
 
 
