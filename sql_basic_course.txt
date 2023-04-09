@@ -234,6 +234,14 @@ MOD(a,b) - остаток от деления a на b
 ============================================
 Strings in SQL https://dev.mysql.com/doc/refman/8.0/en/string-functions.html
 ----------------
+LENGTH(name) - количество байт в строк
+CHAR_LENGTH(name) - длина строки.
+CONCAT(string1,string2) - склеивание строк
+CONCAT_WS(separator,string1,string2) - конкатенация с разделителем
+LEFT(string,2) - берет 2 символа слева от string
+RIGHT(string,2) - берет 2 символа справа от string
+UPPER(string) - переводит с троку в верхний регистр
+TRIM(str) - удаляет пробелы в начале и конце строки (есть отдельно LTRIM,RTRI<)
 
 
 ============================================
