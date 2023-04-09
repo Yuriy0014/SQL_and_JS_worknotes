@@ -243,6 +243,22 @@ RIGHT(string,2) - берет 2 символа справа от string
 UPPER(string) - переводит с троку в верхний регистр
 TRIM(str) - удаляет пробелы в начале и конце строки (есть отдельно LTRIM,RTRIM)
 
+
+TRIM([{BOTH | LEADING | TRAILING} [remstr] FROM] str), TRIM([remstr FROM] str)
+
+Returns the string str with all remstr prefixes or suffixes removed. If none of the specifiers BOTH, LEADING, or TRAILING is given, BOTH is assumed. remstr is optional and, if not specified, spaces are removed.
+
+
+mysql> SELECT TRIM('  bar   ');
+        -> 'bar'
+mysql> SELECT TRIM(LEADING 'x' FROM 'xxxbarxxx');
+        -> 'barxxx'
+mysql> SELECT TRIM(BOTH 'x' FROM 'xxxbarxxx');
+        -> 'bar'
+mysql> SELECT TRIM(TRAILING 'xyz' FROM 'barxxyz');
+        -> 'barx'
+-----------
+
 LPAD(str,len,padstr)
 
 Returns the string str, left-padded with the string padstr to a length of len characters. If str is longer than len, the return value is shortened to len characters.
@@ -252,7 +268,6 @@ mysql> SELECT LPAD('hi',4,'??');
         -> '??hi'
 mysql> SELECT LPAD('hi',1,'??');
         -> 'h'
-
 
 ============================================
 
