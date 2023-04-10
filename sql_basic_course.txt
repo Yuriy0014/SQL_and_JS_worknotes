@@ -318,7 +318,7 @@ GROUP BY
 	MONTH(date)
 order by year, month
 
-
+Для отбора по уже сгруппированным полям используется HAVING
 
 
 

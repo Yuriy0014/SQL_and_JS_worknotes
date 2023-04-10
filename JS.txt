@@ -835,6 +835,29 @@ let shortHand = /\w/;
 
 
 
+My solution:
+function htmlspecialchars(formData) {
+  return formData.split('').map(function(value){
+    return value === "<" ? "&lt;"
+    : value === ">" ? "&gt;"
+    : value === "\"" ? "&quot;" 
+    : value === "&" ? "&amp;"
+    : value; 
+    }
+  ).join('')
+}
+
+
+
+Another solution:
+
+function htmlspecialchars(formData) {
+  return formData.replace(/&/g, "&amp;")
+                 .replace(/"/g, "&quot;")
+                 .replace(/</g, "&lt;")
+                 .replace(/>/g, "&gt;");
+}
+
 
 
 
