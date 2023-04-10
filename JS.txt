@@ -972,7 +972,13 @@ function reverse(n){
 console.log(reverse(1234))
 
 ===================================================
+Просуммироваь массив с числами и массивами. Если что-то левое - игнорируем
+Sum ALL the arrays!
 
+function arraySum(arr) {
+  return arr.reduce(function(sum,item) {
+    return Array.isArray(item) ? sum + arraySum(item) : isNaN(item) ? sum + 0 : sum + item},0)
+}
 
 
 ===================================================
