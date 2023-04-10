@@ -862,14 +862,80 @@ function htmlspecialchars(formData) {
 
 
 ===================================================
+Пример использования функции внутри reduce 
 
+
+function abbrevName(name){
+  
+  return name.split('').reduce(function(answer,value) {
+   return (value.toUpperCase() === value && answer.length === 0) ? answer + value
+   : value === " " ? answer + "."
+   : value.toUpperCase() === value ? answer + value
+   : answer;   
+  },"")
+}
 
 
 
 
 ===================================================
 
+Рыба для задачи Total area covered by rectangles
 
+------------------------------------------------
+
+const X1 = 0;
+const Y1 = 1;
+const X2 = 2;
+const Y2 = 3;
+
+let ASC = (d) => (a, b) => a[d] - b[d];
+let ASCX = (a,b) => a - b
+
+calcVerticalZones = (rectangles) => {
+  let height = 0;
+  rectangles.sort(ASC(Y1)).reduce( (prevY, cur) => {
+                            if(prevY < cur[Y2]
+                              )
+  }
+                                 )
+  return height;
+  
+}
+
+
+
+function calculate(recs){
+  if (resc.length === 0) {
+    return 0;
+  }
+  
+  let area = 0;
+  let positions = new Set();
+  let startFrom = 0;
+  
+  recs = recs.sort(ASC(X1));
+  recs.forEach( rectangle => { positions.add(rectangle[X1]); positions.add(rectangle[X2]);} );
+  
+  let rectanglesInProgress = [];
+  [..positions].sort(ASCX).map((position,i,a) => {
+    let prevPosition = a[i-1] || 0;
+    
+    
+    
+    
+    let height = calcVerticalZones(rectanglesInProgress);
+    let width = position - prevPosition;
+    area += width * height;
+    
+    for(let i = startFrom; i < recs.length || recs[i][X1] === position; startFrom++){
+      rectanglesInProgress.push(recs[i]);
+      
+      
+    }
+  })
+  return area;
+}
 
 
 
