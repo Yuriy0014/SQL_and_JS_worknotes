@@ -958,7 +958,18 @@ function findNeedle(haystack) {
 
 
 ===================================================
-
+function reverse(n){
+  let length = 0;
+  let sum = n;
+  let arr = [];
+  while (sum > 0) {
+    arr.push(sum % 10) ;
+    sum = Math.floor(sum/10)
+    length += 1;
+  }
+  return Number(arr.join(''));
+}
+console.log(reverse(1234))
 
 ===================================================
 
