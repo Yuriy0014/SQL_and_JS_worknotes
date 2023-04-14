@@ -1,3 +1,49 @@
+CW Practice
+
+select MIN(age) as age_min, MAX(age) as age_max from people
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 insert into users (id, first_name, last_name, birthday)
 values (9, "Антон", "Пепеляев", "1992-07-12")
 ============================================
