@@ -18,6 +18,10 @@ select * from books order by copies_sold desc limit 5
 
 select * from travelers where country NOT IN ('USA','Canada','Mexico')
 
+-- Create your SELECT statement here
+select age, COUNT(*) as people_count from people 
+GROUP BY age
+
 
 
 
