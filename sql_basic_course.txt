@@ -2,7 +2,13 @@ CW Practice
 
 select MIN(age) as age_min, MAX(age) as age_max from people
 
-
+SELECT 
+  DATE(created_at) as day,
+  description,
+  COUNT(*)
+FROM events
+where name LIKE ('trained')
+GROUP BY DATE(created_at), description
 
 
 
