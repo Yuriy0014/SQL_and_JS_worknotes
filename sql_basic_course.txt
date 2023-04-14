@@ -1,5 +1,8 @@
-CW Practice
-
+===================
+===================
+====CW Practice
+===================
+===================
 select MIN(age) as age_min, MAX(age) as age_max from people
 
 SELECT 
@@ -390,6 +393,15 @@ order by year, month
 
 
 ============================================
+Слияние двух таблиц
+
+select (id * 10 + 1) as id, first_name as first_name, last_name as last_name,
+age as age, NULL as birthday, sex from users
+
+UNION
+
+select (id * 10 + 2) as id, SUBSTRING_INDEX(name," ",1) as first_name, SUBSTRING_INDEX(name," ",-1) as last_name,
+NULL, birthday, sex from members
 
 
 
