@@ -16,6 +16,8 @@ select capital from countries where continent  IN ('Africa','Afrika') and countr
 
 select * from books order by copies_sold desc limit 5
 
+select * from travelers where country NOT IN ('USA','Canada','Mexico')
+
 
 
 
