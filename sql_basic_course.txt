@@ -11,6 +11,9 @@ where name LIKE ('trained')
 GROUP BY DATE(created_at), description
 
 
+select capital from countries where continent  IN ('Africa','Afrika') and country LIKE 'E%' order by capital LIMIT 3
+
+
 
 
 
