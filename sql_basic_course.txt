@@ -14,6 +14,9 @@ GROUP BY DATE(created_at), description
 select capital from countries where continent  IN ('Africa','Afrika') and country LIKE 'E%' order by capital LIMIT 3
 
 
+select * from books order by copies_sold desc limit 5
+
+
 
 
 
