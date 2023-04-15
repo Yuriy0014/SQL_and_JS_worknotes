@@ -458,6 +458,14 @@ select LEFT(number,6), RIGHT(number,2), SUBSTRING_INDEX(car," ",1),SUBSTRING_IND
 
 
 
+select id, category_id, date, text, 'opened' as status from advs where  user_id = 45
+UNION
+select id, category_id, date, text, 'closed' as status from closed_advs where  user_id = 45
+ORDER BY date,id
+
+
+
+
 
 
 
