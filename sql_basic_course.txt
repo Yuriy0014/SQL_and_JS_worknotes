@@ -498,6 +498,15 @@ ORDER BY rating desc, id
 
 
 
+select type, SUM(amount) as sum_amount from (select amount, 'bank' as type from bank_transactions
+UNION
+select amount, 'cash' as type from cashbox_transactions
+UNION
+select amount, 'paypal' as type from paypal_transactions
+) temp
+GROUP BY type
+order by SUM(amount)
+
 
 
 
