@@ -521,4 +521,13 @@ order by SUM(amount)
 
 
 
+select SUM(amount) as all_money from (select amount from bank_transactions
+UNION
+select amount from cashbox_transactions
+UNION
+select amount from paypal_transactions
+) temp
+
+
+
 
