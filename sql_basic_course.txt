@@ -424,6 +424,11 @@ DELETE FROM table2
 
 
 ============================================
+Практика  UNION
+
+select * from bank_transactions
+UNION
+select * from cashbox_transactions
 
 
 
