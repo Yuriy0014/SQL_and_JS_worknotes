@@ -463,7 +463,12 @@ UNION
 select id, category_id, date, text, 'closed' as status from closed_advs where  user_id = 45
 ORDER BY date,id
 
-
+select date,amount, 'bank' as pt from bank_transactions
+UNION
+select date,amount, 'cash' as pt from cashbox_transactions
+UNION
+select date,amount, 'paypal' as pt from paypal_transactions
+ORDER BY date desc
 
 
 
