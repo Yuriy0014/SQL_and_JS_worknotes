@@ -448,6 +448,16 @@ select (id * 10 + 2) as id, SUBSTRING_INDEX(name," ",1) as first_name, SUBSTRING
 NULL, birthday, sex from members
 
 
+select LEFT(number,6) as number, RIGHT(number,2) as region, mark as mark, model as model from cars
+union
+select number, 39 as region, mark , model from region39
+union
+select lower(number), region, mark , model from avto
+union
+select LEFT(number,6), RIGHT(number,2), SUBSTRING_INDEX(car," ",1),SUBSTRING_INDEX(car," ",-1) from autos
+
+
+
 
 
 
