@@ -433,6 +433,10 @@ select * from cashbox_transactions
 
 
 
+select DATE_FORMAT(date,"%d.%m.%y") as date, amount, 'bank' as payment_type from bank_transactions where client_id = 56
+UNION
+select DATE_FORMAT(date,"%d.%m.%y"), amount, 'cash' from cashbox_transactions where client_id = 56
+
 
 
 
