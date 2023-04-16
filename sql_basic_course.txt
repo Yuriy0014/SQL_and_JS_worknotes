@@ -638,3 +638,10 @@ FROM categories as c
 LEFT OUTER JOIN products as p ON c.id = p.category
 GROUP BY c.name
 ORDER BY category
+
+9_9_4
+
+SELECT p.name, p.price, c.name as category
+FROM categories as c
+RIGHT OUTER JOIN products as p ON c.id = p.category_id
+ORDER BY p.name
