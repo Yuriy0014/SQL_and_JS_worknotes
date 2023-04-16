@@ -589,3 +589,11 @@ JOIN genres as g ON g.id = a.genre_id
 GROUP BY g.id
 ORDER BY artists DESC,g.name
 
+9_8_4
+
+SELECT ci.name, co.name as country, ci.population
+FROM cities as ci
+JOIN countries as co on ci.country = co.id
+WHERE ci.population >= 1000000 and find_in_set("Europe",pw)
+ORDER BY population DESC
+
