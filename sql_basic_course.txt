@@ -623,3 +623,18 @@ LEFT OUTER JOIN roles as r ON em.role_id = r.id
 WHERE em.active = true
 ORDER BY em.last_name,em.first_name
 
+9_9_2
+
+SELECT g.name as genres, COUNT(a.id) as artists
+FROM genres as g
+LEFT OUTER JOIN artists as a ON a.genre_id = g.id
+GROUP BY genres
+ORDER BY genres
+
+9_9_3
+
+SELECT c.name as category, IFNULL(SUM(p.count),0) as products 
+FROM categories as c
+LEFT OUTER JOIN products as p ON c.id = p.category
+GROUP BY c.name
+ORDER BY category
