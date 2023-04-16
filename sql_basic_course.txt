@@ -606,3 +606,11 @@ GROUP BY c.name
 HAVING products > 0
 ORDER BY c.name
 
+9_8_6
+
+insert into genres(name)
+values ('Rap');
+
+
+insert into artists(name,genre_id,is_group)
+values ('Eminem',6,false);
