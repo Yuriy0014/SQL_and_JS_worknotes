@@ -562,5 +562,14 @@ select amount from paypal_transactions
 ) temp
 
 
+JOIN practice
+-------------
 
+9_8_1
+
+SELECT 
+* 
+FROM 
+    products as p
+    JOIN categories as cats ON p.category_id = cats.id
 
