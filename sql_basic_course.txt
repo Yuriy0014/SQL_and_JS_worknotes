@@ -645,3 +645,13 @@ SELECT p.name, p.price, c.name as category
 FROM categories as c
 RIGHT OUTER JOIN products as p ON c.id = p.category_id
 ORDER BY p.name
+
+9_9_5
+
+Select name, COUNT(employees) as employees FROM
+(SELECT r.name, e.id as employees,e.active as active
+FROM roles as r
+LEFT OUTER JOIN employees as e ON r.id = e.role_id) temp
+WHERE active = true or active IS NULL
+GROUP BY name
+ORDER BY employees DESC, name
