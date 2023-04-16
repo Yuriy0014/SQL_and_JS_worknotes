@@ -425,6 +425,18 @@ select (id * 10 + 2) as id, SUBSTRING_INDEX(name," ",1) as first_name, SUBSTRING
 NULL, birthday, sex from members
 
 
+====================
+Обработка NULL выражения
+
+IFNULL
+
+SELECT c.name as category, IFNULL(SUM(p.id),0) as products 
+FROM categories as c
+LEFT OUTER JOIN products as p ON c.id = p.category
+GROUP BY c.name
+ORDER BY category
+
+
 
 ============================================
 Иногда нужно удалить данные из одной таблицы, основываясь на условиях другой. Для этого в конструкции DELETE предусмотрен специальный оператор USING.
