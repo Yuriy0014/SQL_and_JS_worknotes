@@ -597,3 +597,12 @@ JOIN countries as co on ci.country = co.id
 WHERE ci.population >= 1000000 and find_in_set("Europe",pw)
 ORDER BY population DESC
 
+9_8_5
+
+SELECT c.name as category, SUM(p.count) as products 
+FROM categories as c 
+JOIN products as p on c.id = p.category
+GROUP BY c.name
+HAVING products > 0
+ORDER BY c.name
+
