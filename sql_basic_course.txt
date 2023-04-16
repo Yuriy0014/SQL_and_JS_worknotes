@@ -581,3 +581,11 @@ JOIN genres as g ON g.id = a.genre_id
 WHERE a.is_group = true
 ORDER BY genre,a.name
 
+9_8_3
+
+SELECT g.id, g.name, COUNT(*) as artists
+FROM artists as a
+JOIN genres as g ON g.id = a.genre_id
+GROUP BY g.id
+ORDER BY artists DESC,g.name
+
