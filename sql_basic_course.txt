@@ -572,4 +572,12 @@ SELECT
 FROM 
     products as p
     JOIN categories as cats ON p.category_id = cats.id
+	
+9_8_2
+
+SELECT a.name, g. name as genre
+FROM artists as a
+JOIN genres as g ON g.id = a.genre_id
+WHERE a.is_group = true
+ORDER BY genre,a.name
 
